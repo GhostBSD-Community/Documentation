@@ -30,6 +30,8 @@ nav:
       - doas and sudo: en/8000-security/8100-doas-sudo.md
   - 9000 — Troubleshooting:
       - Boot Issues: en/9000-troubleshooting/9100-boot-issues.md
+      - USB Boot Delay (kern.cam.boot_delay): en/9000-troubleshooting/9200-usb-boot-delay.md
+
   - A000 — Advanced Topics:
       - Custom ISO: en/A000-advanced/100-custom-iso.md
   - B000 — Community:
