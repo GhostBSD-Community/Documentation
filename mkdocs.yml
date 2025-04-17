@@ -1,7 +1,7 @@
 site_name: GhostBSD Documentation
 site_description: Structured SSID-style documentation for GhostBSD
 site_author: GhostBSD Community
-repo_url: https://github.com/ghostbsd/ghostbsd-docs
+repo_url: https://github.com/GhostBSD-Community/Documentation
 
 nav:
   - Home: en/index.md
