@@ -1,4 +1,9 @@
-# Mounting External Drives in GhostBSD
+---
+title: Mounting External Drives
+description: Guide to mounting external drives (exFAT, NTFS, UFS) in GhostBSD using GUI and terminal methods.
+---
+
+# Mounting External Drives
 
 This guide explains how to mount external drives, such as USB flash drives or external hard drives, in GhostBSD. It covers common filesystems including **exFAT**, **NTFS**, and **UFS**, using both graphical and terminal-based methods. GhostBSD provides user-friendly tools to make this process accessible for all users.
 
@@ -170,7 +175,6 @@ Use the terminal for manual mounting, especially for filesystems like exFAT, NTF
 - **Performance**:
   - exFAT and NTFS may have slower performance compared to UFS due to FUSE or compatibility layers.
 
-For further assistance, visit the [GhostBSD Forums](https://forums.ghostbsd.org) or join the community on [X](https://x.com/ghostbsd).
 
 ---
 
