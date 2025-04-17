@@ -1,4 +1,4 @@
-# Mounting External Drives
+# Mounting External Drives in GhostBSD
 
 This guide explains how to mount external drives, such as USB flash drives or external hard drives, in GhostBSD. It covers common filesystems including **exFAT**, **NTFS**, and **UFS**, using both graphical and terminal-based methods. GhostBSD provides user-friendly tools to make this process accessible for all users.
 
@@ -6,7 +6,13 @@ This guide explains how to mount external drives, such as USB flash drives or ex
 - An external drive (e.g., USB flash drive or external hard disk) formatted with exFAT, NTFS, UFS, or another filesystem.
 - A GhostBSD system with a desktop environment (e.g., MATE).
 - Basic user permissions (no root access required for GUI automounting; sudo required for terminal commands).
-- Required packages for specific filesystems (installed as needed, see below).
+- Required packages for specific filesystems (installed as needed, see Method 2).
+- The `lsblk` utility for identifying drives in the terminal (not installed by default):
+  - Install `lsblk` by running:
+    ```shell
+    sudo pkg install lsblk
+    ```
+  - This package is part of the `sysutils/lsblk` port and provides a user-friendly way to list block devices.
 
 ## Method 1: Automatic Mounting via Desktop Environment
 GhostBSD’s desktop environments, such as MATE, often include automounting features for external drives.
@@ -37,7 +43,7 @@ Use the terminal for manual mounting, especially for filesystems like exFAT, NTF
    - Plug the drive into a USB port.
 
 2. **Identify the Drive**:
-   - Open a terminal and run:
+   - Ensure `lsblk` is installed (see Prerequisites). Run:
      ```shell
      lsblk
      ```
@@ -116,6 +122,15 @@ Use the terminal for manual mounting, especially for filesystems like exFAT, NTF
     dmesg | tail
     ```
   - Ensure the drive is properly connected and powered.
+- **lsblk Not Found**:
+  - If `lsblk` is not installed, install it:
+    ```shell
+    sudo pkg install lsblk
+    ```
+  - Alternatively, use `camcontrol devlist` to list devices:
+    ```shell
+    camcontrol devlist
+    ```
 - **exFAT Mounting Fails**:
   - Confirm the `fuse` kernel module is loaded:
     ```shell
@@ -154,6 +169,8 @@ Use the terminal for manual mounting, especially for filesystems like exFAT, NTF
   - Consult the GhostBSD documentation for `/etc/fstab` configuration.
 - **Performance**:
   - exFAT and NTFS may have slower performance compared to UFS due to FUSE or compatibility layers.
+
+For further assistance, visit the [GhostBSD Forums](https://forums.ghostbsd.org) or join the community on [X](https://x.com/ghostbsd).
 
 ---
 
