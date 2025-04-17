@@ -1,0 +1,112 @@
+site_name: GhostBSD Documentation
+site_description: Structured SSID-style documentation for GhostBSD
+site_author: GhostBSD Community
+repo_url: https://github.com/ghostbsd/ghostbsd-docs
+
+nav:
+  - Home: en/index.md
+  - 1000 — Basic Orientation:
+      - What is GhostBSD?: en/1000-basic-orientation/1100-what-is-ghostbsd.md
+      - Installation Guide: en/1000-basic-orientation/1200-installation-guide.md
+      - Dual Booting: en/1000-basic-orientation/1310-dual-booting.md
+  - 2000 — Desktop Environments:
+      - MATE Desktop: en/2000-desktop/2100-mate.md
+      - Display Scaling: en/2000-desktop/2300-display-scaling.md
+  - 3000 — System Management:
+      - Software Station: en/3000-system-management/3100-software-station.md
+      - Update Station: en/3000-system-management/3200-update-station.md
+  - 4000 — Networking:
+      - Wi-Fi and Ethernet: en/4000-networking/4100-wifi-ethernet.md
+      - VPN Setup: en/4000-networking/4200-vpn.md
+  - 5000 — Hardware:
+      - GPU Drivers: en/5000-hardware/5100-gpu-drivers.md
+      - Audio Setup: en/5000-hardware/5200-audio.md
+  - 6000 — Storage:
+      - ZFS Setup: en/6000-storage/6200-zfs.md
+      - Encryption: en/6000-storage/6300-encryption.md
+  - 7000 — Development:
+      - Development Tools: en/7000-development/7100-dev-tools.md
+  - 8000 — Security:
+      - doas and sudo: en/8000-security/8100-doas-sudo.md
+  - 9000 — Troubleshooting:
+      - Boot Issues: en/9000-troubleshooting/9100-boot-issues.md
+  - A000 — Advanced Topics:
+      - Custom ISO: en/A000-advanced/100-custom-iso.md
+  - B000 — Community:
+      - Contributing: en/B000-community/200-contributing.md
+  - C000 — Reference:
+      - FAQ: en/C000-reference/100-faq.md
+  - D000 — Project Infrastructure:
+      - ISO Build System: en/D000-infra/200-iso-build.md
+      - pkgbase Layout: en/D000-infra/400-pkgbase.md
+  - E000 — Essential Tasks:
+      - Mounting External Drives: en/E000-essentials/100-mount-external-drives.md
+      - Adjusting Display Brightness: en/E000-essentials/110-display-brightness.md
+      - Setting Default Audio Output: en/E000-essentials/120-audio-output.md
+      - Changing Keyboard Layout: en/E000-essentials/130-keyboard-layout.md
+      - Connecting to Wi-Fi Manually: en/E000-essentials/140-wifi-manual.md
+      - Installing a Printer: en/E000-essentials/150-install-printer.md
+
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: 日本語
+      link: /ja/
+      lang: ja
+    - name: Français
+      link: /fr/
+      lang: fr
+    - name: Русский
+      link: /ru/
+      lang: ru
+    - name: Português
+      link: /pt/
+      lang: pt
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  localization:
+    default: en
+    languages:
+      en: English
+      ja: 日本語
+      fr: Français
+      ru: Русский
+      pt: Português
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - footnotes
+  - attr_list
+  - admonition
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
